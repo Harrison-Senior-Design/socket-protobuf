@@ -1,0 +1,11 @@
+syntax = "proto3";
+package main;
+
+message Belt {
+    int32 opcode = 1;
+    message angle = 1;
+}
+
+message angle {
+    int32 ang = 0;
+}
