@@ -3,9 +3,10 @@ package main;
 
 message Belt {
     int32 opcode = 1;
-    Angle angle = 1;
+    float timestamp = 0;
+    bytes payload = 1;
 }
 
 message Angle {
-    int32 ang = 0;
+    float ang = 0.0;
 }
