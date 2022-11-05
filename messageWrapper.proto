@@ -11,6 +11,6 @@ enum OperationCode {
 
 message Wrapper {
     required OperationCode opcode = 1;
-    required uint64 timestamp = 2;
+    required Timestamp timestamp = 2;
     required google.protobuf.Any payload = 3; // one of payloads defined in beltMessages or unityMessages
 }
