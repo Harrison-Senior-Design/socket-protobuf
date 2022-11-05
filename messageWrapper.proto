@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package main;
+
+import "google/protobuf/any.proto";
+
+enum OperationCode {
+    ANGLE_DATA = 0; // game -> hardware about where angle is
+    MOVE_STARTING_LOCATION = 1; // hardware->game to move starting location (example given of why we need 2 way communication)
+}
+
+message Wrapper {
+    required OperationCode opcode = 1;
+    required uint64 timestamp = 2;
+    required google.protobuf.Any payload = 3; // one of payloads defined in beltMessages or unityMessages
+}
