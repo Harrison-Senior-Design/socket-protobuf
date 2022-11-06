@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Main {
+namespace Biofeedback.Protobuf {
 
   /// <summary>Holder for reflection information generated from main.proto</summary>
   public static partial class MainReflection {
@@ -24,17 +24,18 @@ namespace Main {
     static MainReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgptYWluLnByb3RvEgRtYWluGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoQBCgdXcmFwcGVy",
-            "EiMKBm9wY29kZRgBIAEoDjITLm1haW4uT3BlcmF0aW9uQ29kZRItCgl0aW1l",
-            "c3RhbXAYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiUKB3Bh",
-            "eWxvYWQYAyABKAsyFC5nb29nbGUucHJvdG9idWYuQW55KjsKDU9wZXJhdGlv",
-            "bkNvZGUSDgoKQU5HTEVfREFUQRAAEhoKFk1PVkVfU1RBUlRJTkdfTE9DQVRJ",
-            "T04QAWIGcHJvdG8z"));
+            "CgptYWluLnByb3RvEgRtYWluGhJiZWx0TWVzc2FnZXMucHJvdG8aE3VuaXR5",
+            "TWVzc2FnZXMucHJvdG8aGWdvb2dsZS9wcm90b2J1Zi9hbnkucHJvdG8aH2dv",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ihAEKB1dyYXBwZXISIwoG",
+            "b3Bjb2RlGAEgASgOMhMubWFpbi5PcGVyYXRpb25Db2RlEi0KCXRpbWVzdGFt",
+            "cBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJQoHcGF5bG9h",
+            "ZBgDIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkqOwoNT3BlcmF0aW9uQ29k",
+            "ZRIOCgpBTkdMRV9EQVRBEAASGgoWTU9WRV9TVEFSVElOR19MT0NBVElPThAB",
+            "QheqAhRCaW9mZWVkYmFjay5Qcm90b2J1ZmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Main.OperationCode), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Main.Wrapper), global::Main.Wrapper.Parser, new[]{ "Opcode", "Timestamp", "Payload" }, null, null, null)
+          new pbr::FileDescriptor[] { global::BeltMessages.BeltMessagesReflection.Descriptor, global::UnityMessages.UnityMessagesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Biofeedback.Protobuf.OperationCode), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Biofeedback.Protobuf.Wrapper), global::Biofeedback.Protobuf.Wrapper.Parser, new[]{ "Opcode", "Timestamp", "Payload" }, null, null, null)
           }));
     }
     #endregion
@@ -63,7 +64,7 @@ namespace Main {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Main.MainReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Biofeedback.Protobuf.MainReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -93,9 +94,9 @@ namespace Main {
 
     /// <summary>Field number for the "opcode" field.</summary>
     public const int OpcodeFieldNumber = 1;
-    private global::Main.OperationCode opcode_ = 0;
+    private global::Biofeedback.Protobuf.OperationCode opcode_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Main.OperationCode Opcode {
+    public global::Biofeedback.Protobuf.OperationCode Opcode {
       get { return opcode_; }
       set {
         opcode_ = value;
@@ -232,7 +233,7 @@ namespace Main {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            opcode_ = (global::Main.OperationCode) input.ReadEnum();
+            opcode_ = (global::Biofeedback.Protobuf.OperationCode) input.ReadEnum();
             break;
           }
           case 18: {

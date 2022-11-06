@@ -1,6 +1,10 @@
 syntax = "proto3";
+option csharp_namespace = "Biofeedback.Protobuf";
 
 package main;
+
+import "beltMessages.proto";
+import "unityMessages.proto";
 
 import "google/protobuf/any.proto";
 import "google/protobuf/timestamp.proto";

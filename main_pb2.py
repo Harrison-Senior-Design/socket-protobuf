@@ -13,6 +13,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import beltMessages_pb2 as beltMessages__pb2
+import unityMessages_pb2 as unityMessages__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
@@ -21,10 +23,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='main.proto',
   package='main',
   syntax='proto3',
-  serialized_options=None,
-  serialized_pb=_b('\n\nmain.proto\x12\x04main\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x84\x01\n\x07Wrapper\x12#\n\x06opcode\x18\x01 \x01(\x0e\x32\x13.main.OperationCode\x12-\n\ttimestamp\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12%\n\x07payload\x18\x03 \x01(\x0b\x32\x14.google.protobuf.Any*;\n\rOperationCode\x12\x0e\n\nANGLE_DATA\x10\x00\x12\x1a\n\x16MOVE_STARTING_LOCATION\x10\x01\x62\x06proto3')
+  serialized_options=_b('\252\002\024Biofeedback.Protobuf'),
+  serialized_pb=_b('\n\nmain.proto\x12\x04main\x1a\x12\x62\x65ltMessages.proto\x1a\x13unityMessages.proto\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x84\x01\n\x07Wrapper\x12#\n\x06opcode\x18\x01 \x01(\x0e\x32\x13.main.OperationCode\x12-\n\ttimestamp\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12%\n\x07payload\x18\x03 \x01(\x0b\x32\x14.google.protobuf.Any*;\n\rOperationCode\x12\x0e\n\nANGLE_DATA\x10\x00\x12\x1a\n\x16MOVE_STARTING_LOCATION\x10\x01\x42\x17\xaa\x02\x14\x42iofeedback.Protobufb\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[beltMessages__pb2.DESCRIPTOR,unityMessages__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 _OPERATIONCODE = _descriptor.EnumDescriptor(
   name='OperationCode',
@@ -43,8 +45,8 @@ _OPERATIONCODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=215,
-  serialized_end=274,
+  serialized_start=256,
+  serialized_end=315,
 )
 _sym_db.RegisterEnumDescriptor(_OPERATIONCODE)
 
@@ -94,8 +96,8 @@ _WRAPPER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=81,
-  serialized_end=213,
+  serialized_start=122,
+  serialized_end=254,
 )
 
 _WRAPPER.fields_by_name['opcode'].enum_type = _OPERATIONCODE
@@ -113,4 +115,5 @@ Wrapper = _reflection.GeneratedProtocolMessageType('Wrapper', (_message.Message,
 _sym_db.RegisterMessage(Wrapper)
 
 
+DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)
