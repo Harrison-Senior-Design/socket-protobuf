@@ -1,0 +1,6 @@
+syntax = "proto3";
+option csharp_namespace = "Biofeedback.Protobuf.Hardware";
+
+package hardwareMessages;
+
+message MoveStarterLocationPayload {}

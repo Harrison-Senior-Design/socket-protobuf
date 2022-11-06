@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "Biofeedback.Protobuf.Simulation";
+
+package simulationMessages;
+
+message AnglePayload {
+	float angle = 1;
+}

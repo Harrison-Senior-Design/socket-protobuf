@@ -1,7 +1,0 @@
-syntax = "proto3";
-
-package unityMessages;
-
-message AnglePayload {
-	float angle = 1;
-}
