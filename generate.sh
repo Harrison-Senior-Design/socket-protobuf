@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p generated
+
 # generate python
 protoc --python_out=generated main.proto hardwareMessages.proto simulationMessages.proto
 
