@@ -28,9 +28,10 @@ namespace Biofeedback.Protobuf.Main {
             "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIoQBCgdXcmFwcGVy",
             "EiMKBm9wY29kZRgBIAEoDjITLm1haW4uT3BlcmF0aW9uQ29kZRItCgl0aW1l",
             "c3RhbXAYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiUKB3Bh",
-            "eWxvYWQYAyABKAsyFC5nb29nbGUucHJvdG9idWYuQW55KjsKDU9wZXJhdGlv",
+            "eWxvYWQYAyABKAsyFC5nb29nbGUucHJvdG9idWYuQW55KkkKDU9wZXJhdGlv",
             "bkNvZGUSDgoKQU5HTEVfREFUQRAAEhoKFk1PVkVfU1RBUlRJTkdfTE9DQVRJ",
-            "T04QAUIcqgIZQmlvZmVlZGJhY2suUHJvdG9idWYuTWFpbmIGcHJvdG8z"));
+            "T04QARIMCghJREVOVElGWRACQhyqAhlCaW9mZWVkYmFjay5Qcm90b2J1Zi5N",
+            "YWluYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Biofeedback.Protobuf.Main.OperationCode), }, new pbr::GeneratedClrTypeInfo[] {
@@ -50,6 +51,10 @@ namespace Biofeedback.Protobuf.Main {
     /// hardware->game to move starting location (example given of why we need 2 way communication)
     /// </summary>
     [pbr::OriginalName("MOVE_STARTING_LOCATION")] MoveStartingLocation = 1,
+    /// <summary>
+    /// when a new client connects, we need to send an identify payload
+    /// </summary>
+    [pbr::OriginalName("IDENTIFY")] Identify = 2,
   }
 
   #endregion

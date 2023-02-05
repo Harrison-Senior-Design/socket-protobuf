@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='main',
   syntax='proto3',
   serialized_options=_b('\252\002\031Biofeedback.Protobuf.Main'),
-  serialized_pb=_b('\n\nmain.proto\x12\x04main\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x84\x01\n\x07Wrapper\x12#\n\x06opcode\x18\x01 \x01(\x0e\x32\x13.main.OperationCode\x12-\n\ttimestamp\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12%\n\x07payload\x18\x03 \x01(\x0b\x32\x14.google.protobuf.Any*;\n\rOperationCode\x12\x0e\n\nANGLE_DATA\x10\x00\x12\x1a\n\x16MOVE_STARTING_LOCATION\x10\x01\x42\x1c\xaa\x02\x19\x42iofeedback.Protobuf.Mainb\x06proto3')
+  serialized_pb=_b('\n\nmain.proto\x12\x04main\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x84\x01\n\x07Wrapper\x12#\n\x06opcode\x18\x01 \x01(\x0e\x32\x13.main.OperationCode\x12-\n\ttimestamp\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12%\n\x07payload\x18\x03 \x01(\x0b\x32\x14.google.protobuf.Any*I\n\rOperationCode\x12\x0e\n\nANGLE_DATA\x10\x00\x12\x1a\n\x16MOVE_STARTING_LOCATION\x10\x01\x12\x0c\n\x08IDENTIFY\x10\x02\x42\x1c\xaa\x02\x19\x42iofeedback.Protobuf.Mainb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -40,17 +40,22 @@ _OPERATIONCODE = _descriptor.EnumDescriptor(
       name='MOVE_STARTING_LOCATION', index=1, number=1,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IDENTIFY', index=2, number=2,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=215,
-  serialized_end=274,
+  serialized_end=288,
 )
 _sym_db.RegisterEnumDescriptor(_OPERATIONCODE)
 
 OperationCode = enum_type_wrapper.EnumTypeWrapper(_OPERATIONCODE)
 ANGLE_DATA = 0
 MOVE_STARTING_LOCATION = 1
+IDENTIFY = 2
 
 
 
