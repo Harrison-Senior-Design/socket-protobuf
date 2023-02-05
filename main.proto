@@ -9,6 +9,7 @@ import "google/protobuf/timestamp.proto";
 enum OperationCode {
     ANGLE_DATA = 0; // game -> hardware about where angle is
     MOVE_STARTING_LOCATION = 1; // hardware->game to move starting location (example given of why we need 2 way communication)
+    IDENTIFY = 2; // when a new client connects, we need to send an identify payload
 }
 
 message Wrapper {
