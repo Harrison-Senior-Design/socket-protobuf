@@ -5,4 +5,5 @@ package simulationMessages;
 
 message AnglePayload {
 	float angle = 1;
+	float distance = 2;
 }

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='simulationMessages',
   syntax='proto3',
   serialized_options=_b('\252\002\037Biofeedback.Protobuf.Simulation'),
-  serialized_pb=_b('\n\x18simulationMessages.proto\x12\x12simulationMessages\"\x1d\n\x0c\x41nglePayload\x12\r\n\x05\x61ngle\x18\x01 \x01(\x02\x42\"\xaa\x02\x1f\x42iofeedback.Protobuf.Simulationb\x06proto3')
+  serialized_pb=_b('\n\x18simulationMessages.proto\x12\x12simulationMessages\"/\n\x0c\x41nglePayload\x12\r\n\x05\x61ngle\x18\x01 \x01(\x02\x12\x10\n\x08\x64istance\x18\x02 \x01(\x02\x42\"\xaa\x02\x1f\x42iofeedback.Protobuf.Simulationb\x06proto3')
 )
 
 
@@ -39,6 +39,13 @@ _ANGLEPAYLOAD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='distance', full_name='simulationMessages.AnglePayload.distance', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -52,7 +59,7 @@ _ANGLEPAYLOAD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=48,
-  serialized_end=77,
+  serialized_end=95,
 )
 
 DESCRIPTOR.message_types_by_name['AnglePayload'] = _ANGLEPAYLOAD

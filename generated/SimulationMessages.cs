@@ -25,12 +25,13 @@ namespace Biofeedback.Protobuf.Simulation {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhzaW11bGF0aW9uTWVzc2FnZXMucHJvdG8SEnNpbXVsYXRpb25NZXNzYWdl",
-            "cyIdCgxBbmdsZVBheWxvYWQSDQoFYW5nbGUYASABKAJCIqoCH0Jpb2ZlZWRi",
-            "YWNrLlByb3RvYnVmLlNpbXVsYXRpb25iBnByb3RvMw=="));
+            "cyIvCgxBbmdsZVBheWxvYWQSDQoFYW5nbGUYASABKAISEAoIZGlzdGFuY2UY",
+            "AiABKAJCIqoCH0Jpb2ZlZWRiYWNrLlByb3RvYnVmLlNpbXVsYXRpb25iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Biofeedback.Protobuf.Simulation.AnglePayload), global::Biofeedback.Protobuf.Simulation.AnglePayload.Parser, new[]{ "Angle" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Biofeedback.Protobuf.Simulation.AnglePayload), global::Biofeedback.Protobuf.Simulation.AnglePayload.Parser, new[]{ "Angle", "Distance" }, null, null, null)
           }));
     }
     #endregion
@@ -63,6 +64,7 @@ namespace Biofeedback.Protobuf.Simulation {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AnglePayload(AnglePayload other) : this() {
       angle_ = other.angle_;
+      distance_ = other.distance_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +84,17 @@ namespace Biofeedback.Protobuf.Simulation {
       }
     }
 
+    /// <summary>Field number for the "distance" field.</summary>
+    public const int DistanceFieldNumber = 2;
+    private float distance_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Distance {
+      get { return distance_; }
+      set {
+        distance_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AnglePayload);
@@ -96,6 +109,7 @@ namespace Biofeedback.Protobuf.Simulation {
         return true;
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Angle, other.Angle)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Distance, other.Distance)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -103,6 +117,7 @@ namespace Biofeedback.Protobuf.Simulation {
     public override int GetHashCode() {
       int hash = 1;
       if (Angle != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Angle);
+      if (Distance != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Distance);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -120,6 +135,10 @@ namespace Biofeedback.Protobuf.Simulation {
         output.WriteRawTag(13);
         output.WriteFloat(Angle);
       }
+      if (Distance != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Distance);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -129,6 +148,9 @@ namespace Biofeedback.Protobuf.Simulation {
     public int CalculateSize() {
       int size = 0;
       if (Angle != 0F) {
+        size += 1 + 4;
+      }
+      if (Distance != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -145,6 +167,9 @@ namespace Biofeedback.Protobuf.Simulation {
       if (other.Angle != 0F) {
         Angle = other.Angle;
       }
+      if (other.Distance != 0F) {
+        Distance = other.Distance;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -158,6 +183,10 @@ namespace Biofeedback.Protobuf.Simulation {
             break;
           case 13: {
             Angle = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Distance = input.ReadFloat();
             break;
           }
         }
